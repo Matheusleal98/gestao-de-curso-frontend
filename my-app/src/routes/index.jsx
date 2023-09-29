@@ -3,6 +3,7 @@ import { Login } from "../pages/Login";
 import { Register } from "../pages/Register";
 import { PrivateRoute } from "./privateRoutes";
 import { Home } from "../pages/Home";
+import { StudentManager } from "../pages/studentManager";
 
 export const AppRouter = () => {
     return (
@@ -13,6 +14,7 @@ export const AppRouter = () => {
                 <Route path="/home" element={<PrivateRoute />} >
                     <Route path="/home" element={<Home />} />
                 </Route>
+                <Route path="/admin/cadastro-aluno" element={<StudentManager />} />
             </Routes>
         </Router>
     );
