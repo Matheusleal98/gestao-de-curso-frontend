@@ -17,6 +17,16 @@ export const Navbar = () => {
                     <li>Instrutores</li>
                 </Link>
             </ul>
+            <ul className="nav-links">
+                <Link to="#" className="nav-item">
+                    <li>Cursos</li>
+                </Link>
+            </ul>
+            <ul className="nav-links">
+                <Link to="#" className="nav-item">
+                    <li>Matricula</li>
+                </Link>
+            </ul>
         </nav>
     );
 }
