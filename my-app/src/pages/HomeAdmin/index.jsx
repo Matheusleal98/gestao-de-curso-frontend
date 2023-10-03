@@ -6,15 +6,27 @@ import { Navbar } from "../../components/Navbar";
 export const HomeAdmin = () => {
 
     return(
-        <div className="container">
+    <div className="main-container">
             <Navbar/>
-            <div className="container-page">
+        <section className="container">
+            <div className="content-page">
+                <header className="main-header"> Sistema de Gestão</header>
                 <div className="card">
-                    <div className="card-item">
-                        <button></button>
-                    </div>
+                    <Link to="#" className="btn btn-home">
+                        Cadastrar Aluno
+                    </Link>
+                    <Link to="#" className="btn btn-home">
+                        Cadastrar Aluno
+                    </Link>
+                    <Link to="#" className="btn btn-home">
+                        Cadastrar Aluno
+                    </Link>
+                    <Link to="#" className="btn btn-home">
+                        Cadastrar Aluno
+                    </Link>
                 </div>
             </div>
-        </div>
+        </section>
+    </div>
     );
 }
