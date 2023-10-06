@@ -1,6 +1,6 @@
 import { LayoutPage } from "../../../components/LayoutPage";
 import { Link } from "react-router-dom";
-import "./style.css";
+import "../../../assets/globalPage.css";
 
 export const InstructorManager = () => {
 
@@ -12,19 +12,11 @@ export const InstructorManager = () => {
                     <div className="form-group">
                         <label htmlFor="name">Nome</label>
                         <input required type="text" name="name" id="name"
-                            //    value={name}
-                            //    onChange={(event) => {
-                            //        updateName(event.target.value);
-                            //    }}
                         />
                     </div>
                     <div className="form-group">
                         <label htmlFor="email">Email</label>
                         <input required type="email" name="email" id="email"
-                            //    value={email}
-                            //    onChange={(event) => {
-                            //        updateEmail(event.target.value);
-                            //    }}
                         />
                     </div>
                     <div className="form-group">
@@ -37,8 +29,8 @@ export const InstructorManager = () => {
                         </select>
                     </div>
                     <div className="actions">
-                        <Link to="/admin/home" className="btn-cancel ">Cancelar</Link>
-                        <button className="btn-save">Salvar</button>
+                        <Link to="/admin/home" className="btn btn-cancel">Cancelar</Link>
+                        <button className="btn btn-save">Finalizar Cadastro</button>
                     </div>
                 </form>
             </div>

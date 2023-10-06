@@ -52,18 +52,8 @@
    color: #0A0A2A;
 }
 
-.btn {
-   width:70%;
-   height: 50px;
-   text-decoration: none;
-   border-radius: 0.25rem;
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   border: 1px solid transparent;
- }
-
- .btn.btn-home {
+ .btn-card {
+   width: 50%;
    color: white;
    background-color: #0d6efd;
  }

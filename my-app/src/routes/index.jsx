@@ -6,6 +6,7 @@ import { Home } from "../pages/Home";
 import {HomeAdmin} from "../pages/HomeAdmin";
 import { StudentManager } from "../pages/Student/StudentManager.jsx";
 import { InstructorManager } from "../pages/Instructor/InstructorManager";
+import { EnrollStudent } from "../pages/EnrollStudent";
 
 export const AppRouter = () => {
     return (
@@ -19,6 +20,7 @@ export const AppRouter = () => {
                 <Route path="/admin/home" element={<HomeAdmin />} />
                 <Route path="/admin/cadastro-aluno" element={<StudentManager />} />
                 <Route path="/admin/cadastro-instrutor" element={<InstructorManager />} />
+                <Route path="/admin/matricula" element={<EnrollStudent />} />
             </Routes>
         </Router>
     );
