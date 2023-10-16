@@ -8,12 +8,12 @@ export const Navbar = () => {
                 Student Code
             </header>
             <ul className="nav-links">
-                <Link to="/admin/cadastro-aluno" className="nav-item">
+                <Link to="/admin/aluno" className="nav-item">
                     <li>Alunos</li>
                 </Link>
             </ul>
             <ul className="nav-links">
-                <Link to="/admin/cadastro-instrutor" className="nav-item">
+                <Link to="/admin/instrutor" className="nav-item">
                     <li>Instrutores</li>
                 </Link>
             </ul>

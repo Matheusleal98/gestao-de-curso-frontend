@@ -4,9 +4,9 @@ import { Register } from "../pages/Register";
 import { PrivateRoute } from "./privateRoutes";
 import { Home } from "../pages/Home";
 import {HomeAdmin} from "../pages/HomeAdmin";
-import { StudentManager } from "../pages/Student/StudentManager.jsx";
-import { InstructorManager } from "../pages/Instructor/InstructorManager";
-import { EnrollStudent } from "../pages/EnrollStudent";
+import { Student } from "../pages/Student";
+import { Instructor } from "../pages/Instructor";
+import { Teste } from "../pages/teste";
 
 export const AppRouter = () => {
     return (
@@ -18,9 +18,9 @@ export const AppRouter = () => {
                     <Route path="/home" element={<Home />} />
                 </Route>
                 <Route path="/admin/home" element={<HomeAdmin />} />
-                <Route path="/admin/cadastro-aluno" element={<StudentManager />} />
-                <Route path="/admin/cadastro-instrutor" element={<InstructorManager />} />
-                <Route path="/admin/matricula" element={<EnrollStudent />} />
+                <Route path="/admin/aluno" element={<Student />} />
+                <Route path="/admin/instrutor" element={<Instructor />} />
+                <Route path="/admin/teste" element={<Teste/>} />
             </Routes>
         </Router>
     );
