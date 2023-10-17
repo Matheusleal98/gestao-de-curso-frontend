@@ -14,22 +14,22 @@ export const HomeAdmin = () => {
                 <div className="card-item">
                     <span className="card-title">Aluno</span>
                     <span className="card-texto">Define o processo de cadastro de alunos</span>
-                    <Link to="/admin/cadastro-aluno" className="btn btn-card">Acessar</Link>
+                    <Link to="/admin/aluno" className="btn-card">Acessar</Link>
                 </div>
                 <div className="card-item">
                     <span className="card-title">Instrutor</span>
                     <span className="card-texto">Define o processo de cadastro de instutores</span>
-                    <Link to="/admin/cadastro-instrutor" className="btn btn-card">Acessar</Link>
+                    <Link to="/admin/instrutor" className="btn-card">Acessar</Link>
                 </div>
                 <div className="card-item">
                     <span className="card-title">Curso</span>
                     <span className="card-texto">Define os cursos de programação que serão oferecidos para os alunos</span>
-                    <Link to="/admin/#" className="btn btn-card">Acessar</Link>
+                    <Link to="/admin/#" className="btn-card">Acessar</Link>
                 </div>
                 <div className="card-item">
                     <span className="card-title">Matricula</span>
                     <span className="card-texto">Define o processo de inscrição do aluno em um curso</span>
-                    <Link to="/admin/#" className="btn btn-card">Acessar</Link>
+                    <Link to="/admin/#" className="btn-card">Acessar</Link>
                 </div>
             </div>
         </LayoutPage>

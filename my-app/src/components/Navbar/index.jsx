@@ -8,6 +8,11 @@ export const Navbar = () => {
                 Student Code
             </header>
             <ul className="nav-links">
+                <Link to="/admin/home" className="nav-item">
+                    <li>Home</li>
+                </Link>
+            </ul>
+            <ul className="nav-links">
                 <Link to="/admin/aluno" className="nav-item">
                     <li>Alunos</li>
                 </Link>
