@@ -12,8 +12,13 @@ class Student extends React.Component {
         }
     }
 
+
+    componentDidMount() {
+        this.fetchStudentList();
+    }
+
     fetchStudentList = () => {
-        fetch(`http://localhost:8080/alunos/list`)
+        fetch(`http://localhost:8080/admin/aluno/list`)
         .then((response) => {
             return response.json();
         })
@@ -51,11 +56,11 @@ class Student extends React.Component {
                                     <th>Nome</th>
                                     <th>Email</th>
                                     <th>Nascimento</th>
-                                    <th class="acao">Ações</th>
+                                    <th className="acao">Ações</th>
                                 </tr>
                             </thead>
                             <tbody>
-                             {
+                             {/* {
                                 this.state.studentsList.map((alunos) => {
                                     return (
                                         <tr key={alunos.id}>
@@ -64,9 +69,9 @@ class Student extends React.Component {
                                             <td>{alunos.email}</td>
                                             <td>{alunos.dtNascimento}</td>
                                         </tr>
-                                    )
+                                    );
                                 })
-                             }   
+                             }    */}
                             </tbody>
                         </table>
                     </div>
