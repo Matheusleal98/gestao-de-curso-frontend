@@ -7,32 +7,34 @@ export const Modal = ({ isOpen }) => {
 
     const {id} = useParams();
 
-    const [ra, setRa] = useState(0);
+    const [ra, setRa] = useState();
     const [nome, setNome] = useState("");
     const [email, setEmail] = useState("");
     const [dtNascimento, setDtNascimento] = useState("");
 
-    if (!isOpen) return false;
+    useEffect(() => {
+        const fetchData = async () => {
+            if (isOpen && id) {
+                try {
+                    const response = await fetch(`http://localhost:8080/aluno/${id}`);
+                    if (response.ok) {
+                        const data = await response.json();
+                        setRa(data.ra);
+                        setNome(data.nome);
+                        setEmail(data.email);
+                        setDtNascimento(data.dtNascimento);
+                    }
+                } catch (error) {
+                    console.error("Erro ao buscar dados do aluno:", error);
+                }
+            }
+        };
 
-    // const fetchStudent = () => {
-    //     fetch(`http://localhost:8080/aluno/find/${id}`)
-    //         .then((response) => {
-    //             return response.json();
-    //         })
-    //         .then((data) => {
-    //             setRa(data.ra);
-    //             setNome(data.nome);
-    //             setEmail(data.email);
-    //             setDtNascimento(data.dtNascimento);
-    //         });
-    // };
+        fetchData();
+    }, [isOpen, id]);
 
-    // useEffect(() =>  {
-    //     if(id) {
-    //         fetchStudent();
-    //     }
-    // }, []);
-
+    if (!isOpen) return null;
+    
     const onSubmitForm = (event) => {
         event.preventDefault();
         const body = {
