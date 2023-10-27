@@ -18,7 +18,7 @@ class Student extends React.Component {
     }
 
     fetchStudentList = () => {
-        fetch(`http://localhost:8080/admin/aluno/list`)
+        fetch(`http://localhost:8080/aluno`)
         .then((response) => {
             return response.json();
         })
@@ -35,8 +35,6 @@ class Student extends React.Component {
     openModal = () => {
         this.setState({ modalOpen: true });
     }
-
-    // Function to close the modal
     closeModal = () => {
         this.setState({ modalOpen: false });
     }
@@ -60,8 +58,7 @@ class Student extends React.Component {
                                 </tr>
                             </thead>
                             <tbody>
-                             {/* {
-                                this.state.studentsList.map((alunos) => {
+                             {this.state.studentsList.map((alunos) => {
                                     return (
                                         <tr key={alunos.id}>
                                             <td>{alunos.ra}</td>
@@ -71,39 +68,12 @@ class Student extends React.Component {
                                         </tr>
                                     );
                                 })
-                             }    */}
+                             }   
                             </tbody>
                         </table>
                     </div>
                 </div>
-                <Modal isOpen={this.state.modalOpen}>
-                    <form id="studentForm" className="page-form" action="" method="post">
-                        <div className="page-form-group">
-                            <label htmlFor="ra">RA</label>
-                            <input required type="number" name="ra" id="ra"
-                            />
-                        </div>
-                        <div className="page-form-group">
-                            <label htmlFor="nome">Nome</label>
-                            <input required type="text" name="nome" id="nome"
-                            />
-                        </div>
-                        <div className="page-form-group">
-                            <label htmlFor="email">Email</label>
-                            <input required type="email" name="email" id="email"
-                            />
-                        </div>
-                        <div className="page-form-group">
-                            <label htmlFor="date">Data de Nascimento</label>
-                            <input required type="date" name="date" id="date"
-                            />
-                        </div>
-                        <div className="actions">
-                            <button className="btn btn-save">Salvar</button>
-                            <button onClick={this.closeModal} className="btn btn-cancel">Cancelar</button>
-                        </div>
-                    </form>
-                </Modal>
+                <Modal isOpen={this.state.modalOpen}/>
             </LayoutPage>
         );
     }

@@ -5,8 +5,6 @@ import { PrivateRoute } from "./privateRoutes";
 import { Home } from "../pages/Home";
 import {HomeAdmin} from "../pages/HomeAdmin";
 import  Student  from "../pages/Student";
-import { Instructor } from "../pages/Instructor";
-import { Teste } from "../pages/teste";
 
 export const AppRouter = () => {
     return (
@@ -19,8 +17,6 @@ export const AppRouter = () => {
                 </Route>
                 <Route path="/admin/home" element={<HomeAdmin />} />
                 <Route path="/admin/aluno" element={<Student />} />
-                <Route path="/admin/instrutor" element={<Instructor />} />
-                <Route path="/admin/teste" element={<Teste/>} />
             </Routes>
         </Router>
     );
